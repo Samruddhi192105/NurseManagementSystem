@@ -1,32 +1,19 @@
 "use client";
 
-import { supabase } from "@/lib/supabase/client";
-import { useRouter } from "next/navigation";
-
+import AdminHeader from "@/components/auth/AdminHeader";
+import SignupLayout from "@/components/auth/SignupLayout";
+import SignupSideInfo from "@/components/auth/SignupSideInfo";
+import SignupForm from "@/components/auth/SignupForm";
 export default function SignupPage() {
-  const router = useRouter();
-  const handleSignup = async (e) => {
-    e.preventDefault();
-    const email = e.target.email.value;
-    const password = e.target.password.value;
-
-    const { error } = await supabase.auth.signUp({
-      email,
-      password,
-    });
-
-    if (error) alert(error.message);
-    else {
-      alert("Signup successful. Please login.");
-      router.push("/login");
-    }
-  };
-
   return (
-    <form onSubmit={handleSignup}>
-      <input name="email" placeholder="Email" />
-      <input name="password" type="password" placeholder="Password" />
-      <button type="submit">Sign up</button>
-    </form>
+    <SignupLayout>
+      <AdminHeader />
+      <div className="container mx-auto px-6 py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
+          <SignupSideInfo />
+          <SignupForm />
+        </div>
+      </div>
+    </SignupLayout>
   );
 }
