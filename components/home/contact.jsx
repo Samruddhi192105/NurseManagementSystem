@@ -4,7 +4,7 @@ import { Phone, Mail, MapPin, Clock, Send, ArrowRight } from 'lucide-react';
 const Contact = () => {
   return (
     // section bg changed to a very light blue tint
-    <section className="py-20 bg-[#f0f9ff] px-6"> 
+    <section id="contact" className="py-20 bg-[#f0f9ff] px-6"> 
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">

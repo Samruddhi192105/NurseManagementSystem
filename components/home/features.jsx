@@ -27,7 +27,7 @@ const Features = () => {
   ];
 
   return (
-    <section className="py-24 bg-slate-50 px-6">
+    <section id="features" className="py-24 bg-slate-50 px-6">
       <div className="max-w-6xl mx-auto text-center mb-16">
         <div className="inline-flex items-center gap-2 bg-indigo-50 text-indigo-600 px-4 py-1 rounded-full text-xs font-bold mb-6 tracking-wide uppercase">
           <Clock size={14} /> Why Choose Us

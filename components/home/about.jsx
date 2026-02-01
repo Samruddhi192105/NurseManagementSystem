@@ -3,7 +3,7 @@ import { Target, Sparkles, ShieldCheck, Zap, HeartPulse } from 'lucide-react';
 
 const About = () => {
   return (
-    <section className="py-24 bg-white px-6">
+    <section id="about" className="py-24 bg-white px-6">
       <div className="max-w-6xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-20">

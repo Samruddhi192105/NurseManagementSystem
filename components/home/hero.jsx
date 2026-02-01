@@ -1,10 +1,10 @@
 import React from 'react';
 import { ArrowRight, Users, CheckCircle, Activity } from 'lucide-react';
-
+import Link from  'next/link';
 const Hero = () => {
   return (
     // Added bg-[#f8fafc] and a bottom gradient for a smooth transition
-    <section className="relative pt-20 pb-32 overflow-hidden bg-gradient-to-b from-[#f0f9ff] to-white">
+    <section id="hero" className="relative pt-20 pb-32 overflow-hidden bg-gradient-to-b from-[#f0f9ff] to-white">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Column: Text Content */}
@@ -25,12 +25,16 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <button className="bg-[#00c2a8] hover:bg-[#00ab94] text-white px-8 py-4 rounded-2xl font-bold flex items-center gap-2 transition-all shadow-lg shadow-emerald-200/50">
-                Request Nurses <ArrowRight size={20} />
-              </button>
-              <button className="bg-white border-2 border-slate-100 text-slate-600 px-8 py-4 rounded-2xl font-bold hover:bg-slate-50 transition-all">
-                Admin Portal
-              </button>
+              <Link href="/hospital_form">
+  <button className="bg-[#00c2a8] hover:bg-[#00ab94] text-white px-8 py-4 rounded-2xl font-bold flex items-center gap-2 transition-all shadow-lg shadow-emerald-200/50">
+    Request Nurses <ArrowRight size={20} />
+  </button>
+</Link>
+            <Link href="/login">
+  <button className="bg-white border-2 border-slate-100 text-slate-600 px-8 py-4 rounded-2xl font-bold hover:bg-slate-50 transition-all">
+    Admin Portal
+  </button>
+</Link>
             </div>
 
             {/* Stats */}
